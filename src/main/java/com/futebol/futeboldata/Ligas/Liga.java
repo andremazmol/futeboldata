@@ -17,25 +17,43 @@ public class Liga {
     private Long id;
     private String nomeLiga;
     private String ligaCode;
+    private String ligaEsporte;
     private String paisLiga;
     private String paisImageUrl;
+    private String primeiraLiga;
+    private String tipoLiga;
+    private String ultimoCampeao;
 
 
     public Liga() {
     }
 
-    public Liga(Long id, String nomeLiga, String ligaCode, String paisLiga, String paisImageUrl) {
+
+    public Liga(Long id, String nomeLiga, String ligaCode, String ligaEsporte, String paisLiga, String paisImageUrl, String primeiraLiga, String tipoLiga, String ultimoCampeao) {
         this.id = id;
         this.nomeLiga = nomeLiga;
+        this.ligaCode = ligaCode;
+        this.ligaEsporte = ligaEsporte;
         this.paisLiga = paisLiga;
         this.paisImageUrl = paisImageUrl;
+        this.primeiraLiga = primeiraLiga;
+        this.tipoLiga = tipoLiga;
+        this.ultimoCampeao = ultimoCampeao;
     }
 
-    public Liga(String nomeLiga, String ligaCode, String paisLiga, String paisImageUrl) {
+
+    public Liga(String nomeLiga, String ligaCode, String ligaEsporte, String paisLiga, String paisImageUrl, String primeiraLiga, String tipoLiga, String ultimoCampeao) {
         this.nomeLiga = nomeLiga;
+        this.ligaCode = ligaCode;
+        this.ligaEsporte = ligaEsporte;
         this.paisLiga = paisLiga;
         this.paisImageUrl = paisImageUrl;
+        this.primeiraLiga = primeiraLiga;
+        this.tipoLiga = tipoLiga;
+        this.ultimoCampeao = ultimoCampeao;
     }
+
+   
 
     public Long getId() {
         return this.id;
@@ -79,6 +97,42 @@ public class Liga {
     }
 
 
+    public String getLigaEsporte() {
+        return this.ligaEsporte;
+    }
+
+    public void setLigaEsporte(String ligaEsporte) {
+        this.ligaEsporte = ligaEsporte;
+    }
+
+    public String getPrimeiraLiga() {
+        return this.primeiraLiga;
+    }
+
+    public void setPrimeiraLiga(String primeiraLiga) {
+        this.primeiraLiga = primeiraLiga;
+    }
+
+    public String getTipoLiga() {
+        return this.tipoLiga;
+    }
+
+    public void setTipoLiga(String tipoLiga) {
+        this.tipoLiga = tipoLiga;
+    }
+
+    public String getUltimoCampeao() {
+        return this.ultimoCampeao;
+    }
+
+    public void setUltimoCampeao(String ultimoCampeao) {
+        this.ultimoCampeao = ultimoCampeao;
+    }
+
+
+
+
+   
 
     @Override
     public String toString() {
@@ -86,8 +140,12 @@ public class Liga {
             " id='" + getId() + "'" +
             ", nomeLiga='" + getNomeLiga() + "'" +
             ", ligaCode='" + getLigaCode() + "'" +
+            ", ligaEsporte='" + getLigaEsporte() + "'" +
             ", paisLiga='" + getPaisLiga() + "'" +
             ", paisImageUrl='" + getPaisImageUrl() + "'" +
+            ", primeiraLiga='" + getPrimeiraLiga() + "'" +
+            ", tipoLiga='" + getTipoLiga() + "'" +
+            ", ultimoCampeao='" + getUltimoCampeao() + "'" +
             "}";
     }
     
