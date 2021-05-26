@@ -50,5 +50,11 @@ public class LigaController {
         ligaService.deleteLiga(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+    @GetMapping("/all/{ligaEsporte}")
+    public ResponseEntity <List<Liga>> getLigaByligaEsporte(@PathVariable("ligaEsporte") String ligaEsporte) {
+        List<Liga> ligaListEsporte = ligaService.findLigaByligaEsporte(ligaEsporte);
+        return new ResponseEntity<>(ligaListEsporte, HttpStatus.OK);
+    }
     
 }

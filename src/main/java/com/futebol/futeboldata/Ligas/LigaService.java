@@ -19,6 +19,10 @@ public class LigaService {
         return ligaRepository.findAll();
     }
 
+    public List<Liga> findLigaByligaEsporte(String ligaEsporte) {
+        return ligaRepository.findLigaByligaEsporte(ligaEsporte);
+    }
+
     public Liga addLiga(Liga liga) {
         liga.setId(Double.valueOf(Math.random()).longValue());
         return ligaRepository.save(liga);
@@ -32,6 +36,8 @@ public class LigaService {
     public void deleteLiga(Long id) {
         ligaRepository.deleteLigaById(id);
     }
+
+    
     
     
     
